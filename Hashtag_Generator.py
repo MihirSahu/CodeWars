@@ -60,6 +60,8 @@ s = "YjBrymuTWSr qyYdjprhJUH NTjChmuWQkr QSDiN mkfbx lbktOqjAiTC HrSzryxDaJX"
 print(generate_hashtag(s))
 
 
+# Result: Success
+
 # Optimal Solution
 # def generate_hashtag(s):
 #    output = "#"

@@ -10,7 +10,7 @@
 
 import math
 
-def calc(string):
+def calcPermutations(string):
     # Length of string
     stringLength = len(string)
     # Dict of each unique letter in the string and how many times it has been repeated
@@ -42,6 +42,23 @@ def calc(string):
 
     return int(numerator/denominator)
 
-#def permutations(string):
+def permutations(string):
+    permutationList = []
+    numPermutations = calcPermutations(string)
+    stringCopy = list(string)
+    temp = []
 
-print(calc('aabb'))
+    for idx, i in enumerate(stringCopy):
+        temp = []
+        for j in range(len(stringCopy)):
+            temp = []
+            for k in range(len(stringCopy)):
+                temp.append()
+
+    return permutationList
+
+print(permutations('aabb'))
+
+
+
+# Result: Failure
