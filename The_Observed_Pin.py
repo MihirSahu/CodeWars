@@ -33,30 +33,28 @@ def get_pins(observed):
 
     for idx, i in enumerate(observed):
         if keypad.index(int(i)) - 1 >= 0:
-            print("1")
-            temp = observed
+            print('1')
+            temp = observed.copy()
             temp[idx] = str(int(i) - 1)
             results.append("".join(temp))
         if keypad.index(int(i)) + 1 <= len(keypad) - 1:
-            print("2")
-            print(observed)
-            temp = observed
-            print(temp)
+            print('2')
+            temp = observed.copy()
             temp[idx] = str(int(i) + 1)
-            print(temp)
             results.append("".join(temp))
         if keypad.index(int(i)) - 3 >= 0:
-            print("3")
-            temp = observed
+            print('3')
+            temp = observed.copy()
             temp[idx] = str(int(i) - 3)
             results.append("".join(temp))
         if keypad.index(int(i)) + 3 <= len(keypad) - 1:
-            print("4")
-            print(observed)
-            temp = observed
-            print(temp)
+            print('4')
+            temp = observed.copy()
             temp[idx] = str(int(i) + 3)
-            print(temp)
+            results.append("".join(temp))
+        if int(i) == 8:
+            temp = observed.copy()
+            temp[idx] = str(keypad[keypad.index(8) + 2])
             results.append("".join(temp))
 
     return results
